@@ -1,0 +1,43 @@
+﻿<html>
+<head>
+    <title>ASP.NET Core 1.0 with Angular 2 Playground</title>
+    <script>document.write('<base href="' + document.location.origin + '" />');</script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">    
+    <link rel="stylesheet" href="css/lib/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/lib/bootstrap-datepicker/dist/css/bootstrap-datepicker3.min.css">
+    <link rel="stylesheet" href="css/lib/primeui/primeui-ng-all.min.css">
+    <link rel="stylesheet" href="css/lib/toastr/build/toastr.min.css">
+    <link rel="stylesheet" href="css/lib/dropzone/dist/min/dropzone.min.css">
+    <link rel="stylesheet" href="css/animate.css">
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- 1. Load libraries -->
+    <!-- Polyfill(s) for older browsers -->
+    <script src="lib/core-js/client/shim.min.js"></script>
+    <script src="lib/zone.js/dist/zone.js"></script>
+    <script src="lib/reflect-metadata/Reflect.js"></script>
+    <script src="lib/systemjs/dist/system.src.js"></script>
+
+    <!-- 2. Configure SystemJS -->
+    <script src="systemjs.config.js"></script>
+    <script>System.import('app').catch(function(err){ console.error(err); });</script>
+</head>
+<!-- 3. Display the application -->
+<body>
+    @RenderBody()
+
+    <script src="https://use.fontawesome.com/0a551b2592.js"></script>
+    <script src="lib/jquery/dist/jquery.min.js"></script>
+    <script src="//cdn.auth0.com/js/lock-9.1.js"></script>
+    <script src="lib/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="lib/bootstrap-datepicker/dist/js/bootstrap-datepicker.min.js"></script>
+    <script src="lib/bootstrap-datepicker/dist/locales/bootstrap-datepicker.en-GB.min.js"></script>
+    <script src="lib/linq/linq.min.js"></script>
+    <script src="lib/toastr/build/toastr.min.js"></script>
+    <script src="lib/jquery-slimscroll/jquery.slimscroll.min.js"></script>
+    <script src="lib/metismenu/dist/metismenu.min.js"></script>
+    <script src="lib/dropzone/dist/min/dropzone.min.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>

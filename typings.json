@@ -1,0 +1,10 @@
+{
+  "globalDependencies": {
+    "core-js": "registry:dt/core-js#0.0.0+20160602141332",
+    "dropzone": "registry:dt/dropzone#4.3.0+20160412155034",
+    "jasmine": "registry:dt/jasmine#2.2.0+20160621224255",
+    "jquery": "registry:dt/jquery#1.10.0+20160704162008",
+    "linq": "registry:dt/linq#2.2.0+20160619013616",
+    "node": "registry:dt/node#6.0.0+20160621231320"
+  }
+}
