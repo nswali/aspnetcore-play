@@ -104,7 +104,7 @@ gulp.task('copy:lib', function () {
            "node_modules/linq-ts/dist/**/*",
            "node_modules/toastr/build/*.js",
            "node_modules/toastr/build/*.map",
-           "node_modules/pace/pace.js",
+           "node_modules/pace-progress/pace.min.js",
            "node_modules/metismenu/dist/*.js",
            "node_modules/metismenu/dist/*.map",
            "node_modules/bootstrap-datepicker/dist/js/*.js",

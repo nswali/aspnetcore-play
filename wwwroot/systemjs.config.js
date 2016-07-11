@@ -10,7 +10,6 @@
     'angular2-in-memory-web-api':   'lib/angular2-in-memory-web-api',
     'rxjs':                         'lib/rxjs',
     'primeng':                      'lib/primeng',
-    'pace':                         'lib/pace',
     'angular2-jwt':                 'lib/angular2-jwt/angular2-jwt.js'
   };
   // packages tells the System loader how to load when no filename and/or no extension
@@ -18,8 +17,7 @@
     'app':                          { main: 'main.js',  defaultExtension: 'js' },
     'rxjs':                         { defaultExtension: 'js' },
     'angular2-in-memory-web-api':   { main: 'index.js', defaultExtension: 'js' },
-    'primeng':                      { defaultExtension: 'js' },
-    'pace':                         { main: 'pace.js', defaultExtension: 'js'}
+    'primeng':                      { defaultExtension: 'js' }
   };
   var ngPackageNames = [
     'common',

@@ -5,6 +5,8 @@ import {ToastrExamplesComponent} from './components/toastr.component';
 import {BootstrapDatepickerExamplesComponent} from './components/bootstrap-datepicker.component';
 import {Auth0ExamplesComponent} from './components/auth0.component';
 import {DropzoneExamplesComponent} from './components/dropzone.component';
+import {BootstrapAlertComponent} from './components/bootstrap-alert.component';
+import {ModalLoaderComponent} from './components/modal-loader.component';
 declare var inspinia: any;
 
 @Component({
@@ -32,6 +34,8 @@ declare var inspinia: any;
                         <li><a [routerLink]="['BootstrapDatepicker']"><i class="fa fa-th-large"></i> <span class="nav-label">BS-Datepicker Examples</span></a></li>
                         <li><a [routerLink]="['Auth0']"><i class="fa fa-th-large"></i> <span class="nav-label">Auth0 Examples</span></a></li>
                         <li><a [routerLink]="['Dropzone']"><i class="fa fa-th-large"></i> <span class="nav-label">Dropzone Examples</span></a></li>
+                        <li><a [routerLink]="['BootstrapAlert']"><i class="fa fa-th-large"></i> <span class="nav-label">BS-Alert Examples</span></a></li>
+                        <li><a [routerLink]="['ModalLoader']"><i class="fa fa-th-large"></i> <span class="nav-label">Loader Examples</span></a></li>
                     </ul>
                 </div>
             </nav>
@@ -80,17 +84,19 @@ declare var inspinia: any;
 })
 
 @RouteConfig([
-    { name: 'Primeng', path: 'primeng', component: PrimeNgExamplesComponent, useAsDefault: true },
-    { name: 'Toastr', path: 'toastr', component: ToastrExamplesComponent },
-    { name: 'BootstrapDatepicker', path: 'bootstrap-datepicker', component: BootstrapDatepickerExamplesComponent },
-    { name: 'Auth0', path: 'auth0', component: Auth0ExamplesComponent },
-    { name: 'Dropzone', path: 'dropzone', component: DropzoneExamplesComponent },
+    { name: 'Primeng', path: '\primeng', component: PrimeNgExamplesComponent, useAsDefault: true },
+    { name: 'Toastr', path: '\toastr', component: ToastrExamplesComponent },
+    { name: 'BootstrapDatepicker', path: '\bootstrap-datepicker', component: BootstrapDatepickerExamplesComponent },
+    { name: 'Auth0', path: '\auth0', component: Auth0ExamplesComponent },
+    { name: 'Dropzone', path: '\dropzone', component: DropzoneExamplesComponent },
+    { name: 'BootstrapAlert', path: '\bootstrap-alert', component: BootstrapAlertComponent },
+    { name: 'ModalLoader', path: 'modal-loader', component: ModalLoaderComponent },
 ])
 export class AppComponent implements AfterViewInit {
     text: string;
     year = new Date(Date.now()).getFullYear();
 
     ngAfterViewInit(): void {
-        inspinia.init();        
+        inspinia.init();
     }
 }
