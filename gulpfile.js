@@ -113,6 +113,7 @@ gulp.task('copy:lib', function () {
            "node_modules/angular2-jwt/angular2-jwt.js.map",
            "node_modules/dropzone/dist/min/dropzone.min.js",
            "node_modules/linq/linq.min.js",
+           "node_modules/jasmine-core/lib/jasmine-core/*.*"
     ],
    { base: "node_modules" })
    .pipe(gulp.dest(paths.libJsDest));

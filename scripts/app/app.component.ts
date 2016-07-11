@@ -1,5 +1,6 @@
 import { Component, AfterViewInit } from '@angular/core';
-import {ROUTER_DIRECTIVES, RouteConfig} from '@angular/router-deprecated';
+import { ROUTER_DIRECTIVES } from '@angular/router';
+import { HomeComponent } from './components/home.component';
 import {PrimeNgExamplesComponent} from './components/primeng.component';
 import {ToastrExamplesComponent} from './components/toastr.component';
 import {BootstrapDatepickerExamplesComponent} from './components/bootstrap-datepicker.component';
@@ -7,6 +8,8 @@ import {Auth0ExamplesComponent} from './components/auth0.component';
 import {DropzoneExamplesComponent} from './components/dropzone.component';
 import {BootstrapAlertComponent} from './components/bootstrap-alert.component';
 import {ModalLoaderComponent} from './components/modal-loader.component';
+import {ApiComponent} from './components/api.component';
+import {FormsComponent} from './components/forms.component';
 declare var inspinia: any;
 
 @Component({
@@ -29,13 +32,15 @@ declare var inspinia: any;
                                 IN+
                             </div>
                         </li>
-                        <li class="active"><a [routerLink]="['Primeng']"><i class="fa fa-th-large"></i> <span class="nav-label">Prime NG Examples</span></a></li>
-                        <li><a [routerLink]="['Toastr']"><i class="fa fa-th-large"></i> <span class="nav-label">Toastr Examples</span></a></li>
-                        <li><a [routerLink]="['BootstrapDatepicker']"><i class="fa fa-th-large"></i> <span class="nav-label">BS-Datepicker Examples</span></a></li>
-                        <li><a [routerLink]="['Auth0']"><i class="fa fa-th-large"></i> <span class="nav-label">Auth0 Examples</span></a></li>
-                        <li><a [routerLink]="['Dropzone']"><i class="fa fa-th-large"></i> <span class="nav-label">Dropzone Examples</span></a></li>
-                        <li><a [routerLink]="['BootstrapAlert']"><i class="fa fa-th-large"></i> <span class="nav-label">BS-Alert Examples</span></a></li>
-                        <li><a [routerLink]="['ModalLoader']"><i class="fa fa-th-large"></i> <span class="nav-label">Loader Examples</span></a></li>
+                        <li class="active"><a [routerLink]="['/primeng']"><i class="fa fa-th-large"></i> <span class="nav-label">Prime NG Examples</span></a></li>
+                        <li><a [routerLink]="['/toastr']"><i class="fa fa-th-large"></i> <span class="nav-label">Toastr Examples</span></a></li>
+                        <li><a [routerLink]="['/bootstrap-datepicker']"><i class="fa fa-th-large"></i> <span class="nav-label">BS-Datepicker Examples</span></a></li>
+                        <li><a [routerLink]="['/auth0']"><i class="fa fa-th-large"></i> <span class="nav-label">Auth0 Examples</span></a></li>
+                        <li><a [routerLink]="['/dropzone']"><i class="fa fa-th-large"></i> <span class="nav-label">Dropzone Examples</span></a></li>
+                        <li><a [routerLink]="['/bootstrap-alert']"><i class="fa fa-th-large"></i> <span class="nav-label">BS-Alert Examples</span></a></li>
+                        <li><a [routerLink]="['/modal-loader']"><i class="fa fa-th-large"></i> <span class="nav-label">BS-Loader Examples</span></a></li>
+                        <li><a [routerLink]="['/api-test']"><i class="fa fa-th-large"></i> <span class="nav-label">Api Examples</span></a></li>
+                        <li><a [routerLink]="['/forms']"><i class="fa fa-th-large"></i> <span class="nav-label">Forms Examples</span></a></li>
                     </ul>
                 </div>
             </nav>
@@ -63,7 +68,7 @@ declare var inspinia: any;
                 <div class="wrapper wrapper-content animated fadeInRight">
                     <div class="row">
                         <div class="col-lg-12">
-                            <div class="text-center m-t-lg">
+                            <div class="m-t-lg">
                                 <router-outlet></router-outlet>                                                                
                             </div>
                         </div>
@@ -80,18 +85,20 @@ declare var inspinia: any;
             </div>
         </div>
     `,
-    directives: [ROUTER_DIRECTIVES]
+    directives: [ROUTER_DIRECTIVES],
+    precompile: [
+        HomeComponent, 
+        PrimeNgExamplesComponent, 
+        ToastrExamplesComponent, 
+        BootstrapDatepickerExamplesComponent, 
+        Auth0ExamplesComponent, 
+        DropzoneExamplesComponent, 
+        BootstrapAlertComponent, 
+        ModalLoaderComponent, 
+        ApiComponent, 
+        FormsComponent
+    ]
 })
-
-@RouteConfig([
-    { name: 'Primeng', path: '\primeng', component: PrimeNgExamplesComponent, useAsDefault: true },
-    { name: 'Toastr', path: '\toastr', component: ToastrExamplesComponent },
-    { name: 'BootstrapDatepicker', path: '\bootstrap-datepicker', component: BootstrapDatepickerExamplesComponent },
-    { name: 'Auth0', path: '\auth0', component: Auth0ExamplesComponent },
-    { name: 'Dropzone', path: '\dropzone', component: DropzoneExamplesComponent },
-    { name: 'BootstrapAlert', path: '\bootstrap-alert', component: BootstrapAlertComponent },
-    { name: 'ModalLoader', path: 'modal-loader', component: ModalLoaderComponent },
-])
 export class AppComponent implements AfterViewInit {
     text: string;
     year = new Date(Date.now()).getFullYear();
