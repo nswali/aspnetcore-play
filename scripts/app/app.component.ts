@@ -1,15 +1,16 @@
 import { Component, AfterViewInit } from '@angular/core';
-import { ROUTER_DIRECTIVES } from '@angular/router';
+import { ROUTER_DIRECTIVES, Router } from '@angular/router';
 import { HomeComponent } from './components/home.component';
-import {PrimeNgExamplesComponent} from './components/primeng.component';
-import {ToastrExamplesComponent} from './components/toastr.component';
-import {BootstrapDatepickerExamplesComponent} from './components/bootstrap-datepicker.component';
-import {Auth0ExamplesComponent} from './components/auth0.component';
-import {DropzoneExamplesComponent} from './components/dropzone.component';
-import {BootstrapAlertComponent} from './components/bootstrap-alert.component';
-import {ModalLoaderComponent} from './components/modal-loader.component';
-import {ApiComponent} from './components/api.component';
-import {FormsComponent} from './components/forms.component';
+import { PrimeNgExamplesComponent } from './components/primeng.component';
+import { ToastrExamplesComponent } from './components/toastr.component';
+import { BootstrapDatepickerExamplesComponent } from './components/bootstrap-datepicker.component';
+import { Auth0ExamplesComponent } from './components/auth0.component';
+import { DropzoneExamplesComponent } from './components/dropzone.component';
+import { BootstrapAlertExamplesComponent } from './components/bootstrap-alert-examples.component';
+import { ModalLoaderExamplesComponent } from './components/modal-loader.component';
+import { ApiExamplesComponent } from './components/api.component';
+import { FormsExamplesComponent } from './components/forms.component';
+import { SweetAlertExamplesComponent } from './components/sweetalert.component';
 declare var inspinia: any;
 
 @Component({
@@ -41,6 +42,7 @@ declare var inspinia: any;
                         <li><a [routerLink]="['/modal-loader']"><i class="fa fa-th-large"></i> <span class="nav-label">BS-Loader Examples</span></a></li>
                         <li><a [routerLink]="['/api-test']"><i class="fa fa-th-large"></i> <span class="nav-label">Api Examples</span></a></li>
                         <li><a [routerLink]="['/forms']"><i class="fa fa-th-large"></i> <span class="nav-label">Forms Examples</span></a></li>
+                        <li><a [routerLink]="['/sweetalert']"><i class="fa fa-th-large"></i> <span class="nav-label">Sweet Alert Examples</span></a></li>
                     </ul>
                 </div>
             </nav>
@@ -93,15 +95,19 @@ declare var inspinia: any;
         BootstrapDatepickerExamplesComponent, 
         Auth0ExamplesComponent, 
         DropzoneExamplesComponent, 
-        BootstrapAlertComponent, 
-        ModalLoaderComponent, 
-        ApiComponent, 
-        FormsComponent
+        BootstrapAlertExamplesComponent, 
+        ModalLoaderExamplesComponent, 
+        ApiExamplesComponent, 
+        FormsExamplesComponent,
+        SweetAlertExamplesComponent
     ]
 })
 export class AppComponent implements AfterViewInit {
     text: string;
     year = new Date(Date.now()).getFullYear();
+
+    constructor(private _router: Router) {        
+    }
 
     ngAfterViewInit(): void {
         inspinia.init();

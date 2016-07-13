@@ -62,6 +62,8 @@ gulp.task('copy:css', ['clean:css'], function () {
             "node_modules/metismenu/dist/*.css",
             "node_modules/bootstrap-datepicker/dist/css/*.css",
             "node_modules/dropzone/dist/min/dropzone.min.css",
+            "node_modules/sweetalert2/dist/sweetalert2.min.css",
+            "node_modules/ladda/dist/ladda.min.css"            
         ], { base: 'node_modules' })
         .pipe(gulp.dest(paths.cssLibDest));
 });
@@ -113,7 +115,10 @@ gulp.task('copy:lib', function () {
            "node_modules/angular2-jwt/angular2-jwt.js.map",
            "node_modules/dropzone/dist/min/dropzone.min.js",
            "node_modules/linq/linq.min.js",
-           "node_modules/jasmine-core/lib/jasmine-core/*.*"
+           "node_modules/jasmine-core/lib/jasmine-core/*.*",
+           "node_modules/sweetalert2/dist/sweetalert2.min.js",
+           "node_modules/ladda/dist/ladda.min.js",
+            "node_modules/ladda/dist/spin.min.js",
     ],
    { base: "node_modules" })
    .pipe(gulp.dest(paths.libJsDest));

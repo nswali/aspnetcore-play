@@ -36,7 +36,7 @@ export class ModalLoaderService {
         }
     `]
 })
-export class ModalLoaderComponent implements OnInit {
+export class ModalLoaderExamplesComponent implements OnInit {
     constructor(private svc: ModalLoaderService) { }
 
     ngOnInit() { }

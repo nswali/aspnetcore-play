@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-declare var toastr: any;
+import { AlertService } from './../services/alert.service';
 
 @Component({
     moduleId: module.id,
@@ -9,20 +9,20 @@ declare var toastr: any;
         <div>
             <label>Enter message:</label>
             <input type="text" [(ngModel)]="message" />
-            <a class="btn btn-primary" (click)="showToastr()"><i class="fa fa-trash-o fa-lg"></i> Show</a>
+            <button class="btn btn-primary" (click)="svc.info(message, 'info', { progressBar: true })">Info</button>
+            <button class="btn btn-primary" (click)="svc.success(message)">Success</button>
+            <button class="btn btn-primary" (click)="svc.warning(message)">Warning</button>
+            <button class="btn btn-primary" (click)="svc.error(message)">Error</button>
         </div>        
-    `
+    `,
+    providers: [AlertService]
 })
 export class ToastrExamplesComponent implements OnInit {
     message: string;
 
-    constructor() {        
+    constructor(public svc: AlertService) {        
     }
 
     ngOnInit() {         
-    }
-
-    showToastr(): void {
-        toastr.success(this.message, 'Hello from Toastr');
     }
 }

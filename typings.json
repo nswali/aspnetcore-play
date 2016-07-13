@@ -4,7 +4,9 @@
     "dropzone": "registry:dt/dropzone#4.3.0+20160412155034",
     "jasmine": "registry:dt/jasmine#2.2.0+20160621224255",
     "jquery": "registry:dt/jquery#1.10.0+20160704162008",
-    "linq": "registry:dt/linq#2.2.0+20160619013616",
-    "node": "registry:dt/node#6.0.0+20160621231320"
+    "ladda": "registry:dt/ladda#0.9.4+20160316155526",
+    "linq.3.0.4-beta5": "registry:dt/linq.3.0.4-beta5#3.0.4-Beta5+20160602142127",
+    "node": "registry:dt/node#6.0.0+20160621231320",
+    "toastr": "registry:dt/toastr#2.1.1+20160510010435"
   }
 }

@@ -38,7 +38,7 @@ import { FormGroup, FormControl, Validators, FormBuilder, REACTIVE_FORM_DIRECTIV
         }
 `]
 })
-export class FormsComponent implements OnInit {
+export class FormsExamplesComponent implements OnInit {
     form1Model: any;
     form1: FormGroup;
     

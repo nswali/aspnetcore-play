@@ -13,7 +13,7 @@ import { ResourceService } from './../services/resource.service';
     `,
     providers: [ResourceService]
 })
-export class ApiComponent implements OnInit, OnDestroy {
+export class ApiExamplesComponent implements OnInit, OnDestroy {
     result: string;
 
     constructor(private _service: ResourceService) { }
