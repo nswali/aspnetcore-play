@@ -12,9 +12,13 @@
     <link rel="stylesheet" href="css/lib/dropzone/dist/min/dropzone.min.css">
     <link rel="stylesheet" href="css/lib/sweetalert2/dist/sweetalert2.min.css">
     <link rel="stylesheet" href="css/lib/ladda/dist/ladda.min.css">
-    <link rel="stylesheet" href="css/animate.css">
-    <link rel="stylesheet" href="css/style.css">
-
+    <environment names="Development">
+        <link rel="stylesheet" href="css/animate.css">
+        <link rel="stylesheet" href="css/style.css">
+    </environment>
+    <environment names="Production">
+        <link rel="stylesheet" href="css/style.min.css">
+    </environment>
     <!-- 1. Load libraries -->
     <!-- Polyfill(s) for older browsers -->
     <script src="lib/core-js/client/shim.min.js"></script>
@@ -45,6 +49,11 @@
     <script src="lib/ladda/dist/spin.min.js"></script>
     <script src="lib/ladda/dist/ladda.min.js"></script>
     <script src="lib/pace-progress/pace.min.js"></script>
-    <script src="js/script.js"></script>
+    <environment names="Development">
+        <script src="js/script.js"></script>
+    </environment>
+    <environment names="Production">
+        <script src="js/script.min.js"></script>
+    </environment>
 </body>
 </html>

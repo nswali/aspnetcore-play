@@ -216,7 +216,9 @@ ModelManifest.xml
 /Properties/PublishProfiles
 /wwwroot/app
 /wwwroot/lib
+/wwwroot/js/*.min.js
 /wwwroot/css/lib
+/wwwroot/css/*.min.css
 /bin
 /obj
 /typings
